@@ -33,7 +33,7 @@ def calculate(data):
         response_data = json.dumps(
         {"slackUsername": "Wamuyu",
         "result": result,
-        "operation_type": operator
+        "operation_type": Operation[operation_type].value
         }
     )
     except KeyError:
