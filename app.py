@@ -35,6 +35,7 @@ def calculate(data):
         {"slackUsername": "Wamuyu",
         "result": result,
         "operation_type": data['operation_type']
+        # "operation_type": Operation[operation_type].value
         }
     )
     except KeyError:
