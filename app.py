@@ -23,18 +23,17 @@ def calculate(data):
         y = data['y']
         operation_type = data['operation_type']
         operator = Operation[operation_type].value
-        op = Operation[operation_type]
-        print(type(op))
-        if operator is "*":
+        print(type(Operation[operation_type].value))
+        if (operator =="*"):
             result = x * y
-        elif operator is "+":
+        elif (operator == "+"):
             result = x + y
         else:
             result = x - y
         response_data = json.dumps(
         {"slackUsername": "Wamuyu",
         "result": result,
-        "operation_type": op
+        "operation_type": Operation[operation_type].value
         }
     )
     except KeyError:
