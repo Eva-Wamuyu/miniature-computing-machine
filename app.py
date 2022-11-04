@@ -33,7 +33,7 @@ def calculate(data):
         response_data = json.dumps(
         {"slackUsername": "Wamuyu",
         "result": result,
-        "operation_type": Operation[operation_type].value
+        "operation_type": Operation[operation_type]
         }
     )
     except KeyError:
@@ -53,7 +53,7 @@ def calculate(data):
 
     
 class Operation(Enum):
-    multiplication = '*'
+    multiplication = '*',
     addition = '+'
     subtraction = '-'
 
